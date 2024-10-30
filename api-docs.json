@@ -1,0 +1,66 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Koi Fish Purchase Management API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/farms": {
+      "get": {
+        "summary": "Get all koi farms",
+        "responses": {
+          "200": {
+            "description": "List of farms",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Farm"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tours": {
+      "get": {
+        "summary": "Get available tours",
+        "parameters": [
+          {
+            "name": "farmId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ]
+      }
+    },
+    "/api/orders": {
+      "post": {
+        "summary": "Create new service order",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceOrder"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
