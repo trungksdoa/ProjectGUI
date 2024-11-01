@@ -1,0 +1,154 @@
+/* Main Container */
+.main-container {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Header Styles */
+.header-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.sub-header {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+/* Content Container */
+.content-container {
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+}
+
+/* Tab Pane Styling */
+.main-tab-pane {
+    -fx-background-color: white;
+    -fx-tab-min-height: 30px;
+}
+
+.main-tab-pane .tab {
+    -fx-background-color: #ecf0f1;
+    -fx-padding: 5px 15px;
+}
+
+.main-tab-pane .tab:selected {
+    -fx-background-color: #3498db;
+}
+
+.main-tab-pane .tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+/* Button Styling */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Table Styling */
+.table-view {
+    -fx-background-color: white;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+/* Form Controls */
+.text-field, .combo-box, .date-picker {
+    -fx-pref-height: 35px;
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 3px;
+}
+
+.titled-pane {
+    -fx-text-fill: #2c3e50;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #ecf0f1;
+    -fx-padding: 10px;
+}
+
+/* Farm and Koi Cards */
+.farm-card, .koi-card {
+    -fx-background-color: white;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-background-radius: 5px;
+}
+
+.farm-name, .koi-name {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.farm-location {
+    -fx-font-size: 14px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.farm-description, .koi-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+    -fx-wrap-text: true;
+}
+
+/* Search Filters */
+.filter-section {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 15px;
+    -fx-background-radius: 5px;
+}
+
+/* Primary Button */
+.primary-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+}
+
+.primary-button:hover {
+    -fx-background-color: #27ae60;
+}
+
+/* Table Styling */
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+
+/* Form Controls */
+.text-field, .text-area, .combo-box, .date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 3px;
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: #3498db;
+} 

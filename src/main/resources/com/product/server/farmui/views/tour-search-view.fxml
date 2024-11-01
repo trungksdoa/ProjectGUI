@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" styleClass="content-container"
+      xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.product.server.farmui.controllers.TourSearchController">
+    
+    <!-- Search Filters -->
+    <TitledPane text="Search Filters" expanded="true">
+        <GridPane hgap="15" vgap="15">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Label text="Farm:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <ComboBox fx:id="farmComboBox" promptText="Select Farm"
+                      GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Koi Variety:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <ComboBox fx:id="koiVarietyComboBox" promptText="Select Variety"
+                      GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+            <Label text="Price Range:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <TextField promptText="Min" prefWidth="100"/>
+                <TextField promptText="Max" prefWidth="100"/>
+            </HBox>
+
+            <Label text="Date:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <DatePicker fx:id="tourDatePicker" 
+                       GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+            <Button text="Search" onAction="#handleSearch"
+                    GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+        </GridPane>
+    </TitledPane>
+
+    <!-- Search Results -->
+    <TitledPane text="Available Tours" expanded="true" VBox.vgrow="ALWAYS">
+        <TableView fx:id="tourTableView">
+            <columns>
+                <TableColumn text="Tour ID"/>
+                <TableColumn text="Farm"/>
+                <TableColumn text="Date"/>
+                <TableColumn text="Duration"/>
+                <TableColumn text="Price"/>
+                <TableColumn text="Available Slots"/>
+                <TableColumn text="Status"/>
+            </columns>
+        </TableView>
+    </TitledPane>
+</VBox> 

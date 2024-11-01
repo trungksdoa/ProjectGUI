@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane fitToWidth="true" fitToHeight="true" 
+            xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.product.server.farmui.controllers.HomeController">
+    <VBox spacing="20" styleClass="content-container">
+        <!-- Farm Showcase Section -->
+        <TitledPane text="Featured Koi Farms" expanded="true">
+            <VBox spacing="15">
+                <GridPane hgap="20" vgap="20">
+                    <!-- Farm Cards -->
+                    <VBox styleClass="farm-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <Label text="Sakai Fish Farm" styleClass="farm-name"/>
+                        <Label text="Location: Hiroshima, Japan" styleClass="farm-location"/>
+                        <Label text="Specializes in Kohaku and Sanke varieties" 
+                               styleClass="farm-description" wrapText="true"/>
+                    </VBox>
+                    
+                    <VBox styleClass="farm-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <Label text="Dainichi Koi Farm" styleClass="farm-name"/>
+                        <Label text="Location: Niigata, Japan" styleClass="farm-location"/>
+                        <Label text="Famous for Showa and Goshiki breeds" 
+                               styleClass="farm-description" wrapText="true"/>
+                    </VBox>
+                </GridPane>
+            </VBox>
+        </TitledPane>
+
+        <!-- Koi Varieties Section -->
+        <TitledPane text="Popular Koi Varieties" expanded="true">
+            <VBox spacing="15">
+                <GridPane hgap="20" vgap="20">
+                    <!-- Koi Variety Cards -->
+                    <VBox styleClass="koi-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <Label text="Kohaku" styleClass="koi-name"/>
+                        <Label text="White body with red markings" 
+                               styleClass="koi-description" wrapText="true"/>
+                    </VBox>
+                    
+                    <VBox styleClass="koi-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <Label text="Showa" styleClass="koi-name"/>
+                        <Label text="Black body with red and white markings" 
+                               styleClass="koi-description" wrapText="true"/>
+                    </VBox>
+                </GridPane>
+            </VBox>
+        </TitledPane>
+    </VBox>
+</ScrollPane> 

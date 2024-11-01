@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane fitToWidth="true" fitToHeight="true"
+            xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.product.server.farmui.controllers.BookingController">
+    
+    <VBox spacing="20" styleClass="content-container">
+        <TitledPane text="Customer Information" expanded="true">
+            <GridPane hgap="15" vgap="15">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+
+                <Label text="Full Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="customerNameField" 
+                          GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Contact Number:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="contactNumberField" 
+                          GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="emailField" 
+                          GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            </GridPane>
+        </TitledPane>
+
+        <TitledPane text="Tour Details" expanded="true">
+            <GridPane hgap="15" vgap="15">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+
+                <Label text="Tour Type:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <ComboBox fx:id="tourTypeComboBox" promptText="Select Tour Type"
+                         GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Preferred Date:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <DatePicker fx:id="preferredDatePicker" 
+                           GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Number of Participants:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <Spinner fx:id="participantsSpinner" min="1" max="10" initialValue="1"
+                         GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            </GridPane>
+        </TitledPane>
+
+        <TitledPane text="Special Requirements" expanded="true">
+            <TextArea fx:id="specialRequirementsArea" prefRowCount="4" wrapText="true"/>
+        </TitledPane>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Clear" onAction="#handleClear"/>
+            <Button text="Book Now" onAction="#handleBooking" styleClass="primary-button"/>
+        </HBox>
+    </VBox>
+</ScrollPane> 
