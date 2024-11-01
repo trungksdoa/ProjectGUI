@@ -23,69 +23,17 @@
     <TabPane fx:id="mainTabPane" VBox.vgrow="ALWAYS" styleClass="main-tab-pane">
         <!-- Home Tab -->
         <Tab text="Home" closable="false">
-            <ScrollPane fitToWidth="true" fitToHeight="true">
-                <VBox spacing="20" styleClass="content-container">
-                    <Label text="Welcome to Koi Fish Trading Service Management" styleClass="header-label"/>
-                    
-                    <!-- Featured Farms Section -->
-                    <TitledPane text="Featured Koi Farms" expanded="true">
-                        <VBox spacing="10">
-                            <Label text="Discover Our Partner Farms in Japan" styleClass="sub-header"/>
-                            <!-- Add farm cards here -->
-                        </VBox>
-                    </TitledPane>
-                    
-                    <!-- Popular Koi Varieties -->
-                    <TitledPane text="Popular Koi Varieties" expanded="true">
-                        <VBox spacing="10">
-                            <Label text="Explore Premium Koi Varieties" styleClass="sub-header"/>
-                            <!-- Add koi variety cards here -->
-                        </VBox>
-                    </TitledPane>
-                </VBox>
-            </ScrollPane>
+            <fx:include source="views/home-view.fxml"/>
         </Tab>
 
         <!-- Tour Search Tab -->
         <Tab text="Tour Search" closable="false">
-            <VBox spacing="20" styleClass="content-container">
-                <GridPane hgap="10" vgap="10">
-                    <Label text="Farm:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-                    <ComboBox GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-                    
-                    <Label text="Koi Variety:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
-                    <ComboBox GridPane.columnIndex="3" GridPane.rowIndex="0"/>
-                    
-                    <Label text="Price Range:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-                    <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                        <TextField promptText="Min"/>
-                        <TextField promptText="Max"/>
-                    </HBox>
-                    
-                    <Label text="Date:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
-                    <DatePicker GridPane.columnIndex="3" GridPane.rowIndex="1"/>
-                    
-                    <Button text="Search" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
-                </GridPane>
-                
-                <TableView VBox.vgrow="ALWAYS">
-                    <columns>
-                        <TableColumn text="Tour ID"/>
-                        <TableColumn text="Farm"/>
-                        <TableColumn text="Date"/>
-                        <TableColumn text="Price"/>
-                        <TableColumn text="Status"/>
-                    </columns>
-                </TableView>
-            </VBox>
+            <fx:include source="views/tour-search-view.fxml"/>
         </Tab>
 
         <!-- Service Booking Tab -->
         <Tab text="Book Service" closable="false">
-            <VBox spacing="20" styleClass="content-container">
-                <Label text="Book Koi Purchase Service" styleClass="header-label"/>
-                <!-- Add booking form here -->
-            </VBox>
+            <fx:include source="views/booking-view.fxml"/>
         </Tab>
 
         <!-- Order Management Tab -->

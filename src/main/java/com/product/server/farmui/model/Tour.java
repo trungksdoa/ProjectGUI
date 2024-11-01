@@ -1,4 +1,4 @@
-import com.product.server.farmui.model.Farm;
+package com.product.server.farmui.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
